@@ -7,9 +7,7 @@
     text-decoration: none;
     list-style: none;
     line-height: 1.5;
-    /* transition: all 0.3s; */
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Playfair Display', sans-serif; */
 }
 
 *::before,
@@ -20,6 +18,7 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -52,13 +51,6 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
-
-/* * {
-    outline: 1px solid red;
-} */
-
-
-
 :root {
     --small-fz: calc(13px + (18 - 13) * ((100vw - 425px) / (1440 - 425)));
     --medium-fz: calc(13px + (22 - 13) * ((100vw - 425px) / (1440 - 425)));
@@ -110,8 +102,8 @@ header #menu .close {
     top: 2rem;
     right: 2rem;
     cursor: pointer;
-    transition: opacity 0.3s ease-in-out;  /* Плавное появление */
-    opacity: 0;  /* Изначально прозрачная */
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
     display: none;
 }
 header #menu .close:hover {
@@ -150,7 +142,7 @@ header .navbar ul li a:hover {
     font-family: 'Playfair Display', sans-serif;
     color: var(--dark-clr);
     font-weight: 400;
-    line-height: 1; /* адаптация line-height от font-size, т.е. умножается  на font-size */
+    line-height: 1;
 }
 .hello .content p {
     font-size: var(--small-fz);
@@ -232,7 +224,7 @@ header .navbar ul li a:hover {
     padding: 0.8rem;
     position: absolute;
     z-index: 1;
-    bottom: 125%;  /* Расположение сверху от текста */
+    bottom: 125%;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -246,11 +238,6 @@ header .navbar ul li a:hover {
 /* about section start */
 .about {
     background: url('../img/cakes-about.jpg') calc(-670px + (-400 + 670) * ((100vw - 320px) / (1440 - 320))) 0/auto 55% no-repeat;
-    /* background: url('../img/cakes-about.jpg') no-repeat; работает */
-    /* background-position: clamp(-40rem, -10vw, 0) 0;  не работает!!! */
-    /* background-position: calc(-670px + (-400 + 670) * ((100vw - 320px) / (1440 - 320))) 0; работает */
-    /* background-size: auto 55%; работает */
-    /* padding: 16rem 14rem; */
     padding: 16rem calc(20px + (140 - 20) * ((100vw - 407px) / (1440 - 407)));
 }
 .about h2 {
@@ -284,8 +271,8 @@ header .navbar ul li a:hover {
     justify-content: flex-end;
 }
 .about .video img:hover {
-    transform: scale(1.1); /* Увеличение размера */
-    transition: transform 0.3s ease; /* Плавный переход */
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 /* about section end */
 /* price section start */
@@ -305,7 +292,7 @@ header .navbar ul li a:hover {
     justify-content: center;
 }
 .price .container table {
-    border-collapse: collapse;  /* встановлює, як відображати кордони навколо комірок таблиці */
+    border-collapse: collapse;
     font-size: var(--small-fz);
     color: var(--grey-clr);
     width: 100%;
@@ -394,9 +381,6 @@ header .navbar ul li a:hover {
 .contact form .box:focus {
     border: 1px solid var(--brown-clr);
 }
-/* .contact form textarea.has-text {
-    border: 5px solid var(--brown-clr);
-} */
 .contact form .btn {
     background-color: var(--brown-clr);
     font-size: var(--small-fz);
@@ -450,7 +434,7 @@ footer p a {
         height: 100%;
         right: -100%;
         background-color: rgba(0, 0, 0, 0.9);
-        transition: right 0.5s ease-in-out;  /* Плавное перемещение меню */
+        transition: right 0.5s ease-in-out;
     }
     header .navbar.active {
         right: 0;
@@ -458,7 +442,7 @@ footer p a {
     header #menu .close.active {
         display: block;
         z-index: 1;
-        opacity: 1;  /* Полностью видимая */
+        opacity: 1;
     }
     header .navbar ul li {
         margin: 1rem 5rem;
