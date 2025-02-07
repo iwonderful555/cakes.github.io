@@ -1,0 +1,483 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.5;
+    /* transition: all 0.3s; */
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Playfair Display', sans-serif; */
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+img,
+video,
+picture,
+canvas,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
+
+
+
+:root {
+    --small-fz: calc(13px + (18 - 13) * ((100vw - 425px) / (1440 - 425)));
+    --medium-fz: calc(13px + (22 - 13) * ((100vw - 425px) / (1440 - 425)));
+    --big-fz: calc(13px + (28 - 13) * ((100vw - 425px) / (1440 - 425)));
+    --large-fz: calc(48px + (80 - 48) * ((100vw - 425px) / (1440 - 425)));
+    --dark-clr: #2B2257;
+    --grey-clr: #817E95;
+    --brown-clr: #AD8266;
+}
+section {
+    margin-left: 250px;
+}
+.heading {
+    font-size: var(--large-fz);
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    color: var(--dark-clr);
+    text-align: center;
+}
+/* header section start  */
+header {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+header .logo {
+    display: inline-block;
+    text-align: center;
+    padding: 76px 74px;
+}
+header #menu .open {
+    font-size: var(--big-fz);
+    color: red;
+    font-weight: 700;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    display: none;
+}
+header #menu .close {
+    font-size: var(--medium-fz);
+    color: var(--grey-clr);
+    font-weight: 700;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;  /* Плавное появление */
+    opacity: 0;  /* Изначально прозрачная */
+    display: none;
+}
+header #menu .close:hover {
+    color: #fff;
+}
+header .navbar {
+    text-align: center;
+}
+header .navbar ul li a {
+    font-size: var(--small-fz);
+    font-weight: 700;
+    line-height: 38px;
+    color: var(--dark-clr);
+}
+header .navbar ul li a:hover {
+    color: #7A71A7;
+}
+/* header section end */
+/* hello section start  */
+.hello {
+    background: url('../img/home_cakes_slider_bg.jpg') 0 0 / cover no-repeat;
+    padding: 19rem 0rem;
+    display: flex;
+}
+.hello .content {
+    /* width: 53rem; */
+    background-color: #fff;
+    margin: 0px auto;
+    text-align: center;
+    padding: 6.7rem 2.3rem;
+    border-radius: 5rem;
+    box-shadow: -2rem 3rem 5rem rgba(112, 116, 103, 0.2);
+}
+.hello .content h3 {
+    font-size: var(--large-fz);
+    font-family: 'Playfair Display', sans-serif;
+    color: var(--dark-clr);
+    font-weight: 400;
+    line-height: 1; /* адаптация line-height от font-size, т.е. умножается  на font-size */
+}
+.hello .content p {
+    font-size: var(--small-fz);
+    font-weight: 300;
+    line-height: 2.2rem;
+    color: var(--grey-clr);
+    margin-top: 3rem;
+}
+.hello .content .btn {
+    margin-top: 4.8rem;
+    padding: 1.2rem 4rem;
+    background-color: var(--brown-clr);
+    font-size: var(--small-fz);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+/* hello section end */
+/* what we do section start */
+.what {
+    padding-top: 8rem;
+    background-color: #fbfbfb;
+}
+.what h5{
+    text-align: center;
+    font-size: var(--small-fz);
+    font-weight: 100;
+    color: var(--dark-clr);
+}
+.what .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6.2rem;
+    margin-top: 5.5rem;
+}
+.what .container .row1 {
+    margin-top: 13rem;
+}
+.what .container .card {
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 1.6rem 3.5rem 0.1rem rgba(157, 127, 92, 0.15);
+    margin-bottom: 4rem;
+    padding: 8rem 5.8rem;
+    max-width: 40.8rem;
+}
+.what .container .card h3 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: var(--big-fz);
+    color: var(--dark-clr);
+}
+.what .container .card img {
+    margin: 3.6rem auto;
+}
+.what .container .card span {
+    font-size: var(--small-fz);
+    color: var(--grey-clr);
+}
+.what .container .card p {
+    font-size: var(--small-fz);
+    color: var(--grey-clr);
+    border-bottom: 1px dotted var(--grey-clr);
+    line-height: 2.8rem;
+    cursor: help;
+    margin-top: 5rem;
+    position: relative;
+}
+.what .container .card p .tooltip-text {
+    visibility: hidden;
+    width: 25rem;
+    background-color: var(--dark-clr);
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;  /* Расположение сверху от текста */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.what .container .card p:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+/* what we do section end */
+/* about section start */
+.about {
+    background: url('../img/cakes-about.jpg') calc(-670px + (-400 + 670) * ((100vw - 320px) / (1440 - 320))) 0/auto 55% no-repeat;
+    /* background: url('../img/cakes-about.jpg') no-repeat; работает */
+    /* background-position: clamp(-40rem, -10vw, 0) 0;  не работает!!! */
+    /* background-position: calc(-670px + (-400 + 670) * ((100vw - 320px) / (1440 - 320))) 0; работает */
+    /* background-size: auto 55%; работает */
+    /* padding: 16rem 14rem; */
+    padding: 16rem calc(20px + (140 - 20) * ((100vw - 407px) / (1440 - 407)));
+}
+.about h2 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: var(--big-fz);
+    color: var(--brown-clr);
+    margin-bottom: 3.6rem;
+}
+.about .heading {
+    text-align: left;
+    line-height: 1;
+}
+.about .line {
+    width: 23rem;
+    height: 1px;
+    background-color: var(--grey-clr);
+    margin: 2rem 0rem;
+}
+.about .first {
+    font-size: var(--medium-fz);
+    color: var(--dark-clr);
+    margin-bottom: 1.8rem;
+}
+.about .second {
+    font-size: var(--small-fz);
+    color: var(--grey-clr);
+    margin-bottom: 8.8rem;
+}
+.about .vid {
+    display: flex;
+    justify-content: flex-end;
+}
+.about .video img:hover {
+    transform: scale(1.1); /* Увеличение размера */
+    transition: transform 0.3s ease; /* Плавный переход */
+}
+/* about section end */
+/* price section start */
+.price {
+    background-color: #fbfbfb;
+    padding: 10rem calc(20px + (135 - 20) * ((100vw - 407px) / (1440 - 407)));
+}
+.price h2 {
+    text-align: center;
+    font-size: var(--small-fz);
+    color: var(--dark-clr);
+    font-weight: 100;
+    padding-bottom: 5.5rem;
+}
+.price .container {
+    display: flex;
+    justify-content: center;
+}
+.price .container table {
+    border-collapse: collapse;  /* встановлює, як відображати кордони навколо комірок таблиці */
+    font-size: var(--small-fz);
+    color: var(--grey-clr);
+    width: 100%;
+}
+.price .container table tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+.price .container table tr:last-child {
+    border-bottom: none;
+}
+.price .container table td {
+    padding: 1.8rem 3rem;
+    text-align: center;
+}
+.price .container table .item {
+    text-align: left;
+    color: var(--brown-clr);
+    font-weight: 700;
+    border-left: 1px solid #e0e0e0;
+}
+/* price section end */
+/* contact section start */
+.contact {
+    background: url('../img/cakes_contact.jpg') calc(-750px + (-350 + 750) * ((100vw - 407px) / (1440 - 407))) 0/auto auto no-repeat;
+    padding: 11rem calc(15px + (130 - 15) * ((100vw - 407px) / (1440 - 407)));
+}
+.contact .logo {
+    margin-top: 9rem;
+}
+.contact .info {
+    display: flex;
+    margin-top: 6rem;
+    gap: 5rem;
+    align-items: end;
+    flex: 1 1 44.6rem;
+    flex-wrap: wrap;
+}
+.contact .info .location {
+    display: flex;
+}
+.contact .info .location img {
+    width: 8%;
+    height: 100%;
+    margin-right: 3.5rem;
+}
+.contact .info .box-info p {
+    font-size: var(--medium-fz);
+    color: var(--dark-clr);
+}
+.contact .info .box-info p span {
+    color: var(--brown-clr);
+}
+.contact .info .box-info .line {
+    width: 30rem;
+    height: 1px;
+    background-color: var(--grey-clr);
+    margin: 1.7rem 0rem;
+}
+.contact h2 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: var(--medium-fz);
+    font-weight: 700;
+    margin: 4rem 0rem;
+}
+.contact form .form-box {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .form-box .box {
+    
+    flex: 1 1 auto;
+    /* width: 100%; */
+    padding: 1.1rem;
+    font-size: var(--small-fz);
+}
+.contact form textarea {
+    width: 100%;
+    margin-top: 1.3rem;
+    padding: 1.1rem;
+    font-size: var(--small-fz);
+    height: 20rem;
+}
+.contact form textarea:focus,
+.contact form .box:focus {
+    border: 1px solid var(--brown-clr);
+}
+/* .contact form textarea.has-text {
+    border: 5px solid var(--brown-clr);
+} */
+.contact form .btn {
+    background-color: var(--brown-clr);
+    font-size: var(--small-fz);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    margin-top: 1.8rem;
+}
+/* contact section end */
+footer {
+    background-color: #f4f4f4;
+}
+footer p {
+    font-size: var(--small-fz);
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    color: var(--dark-clr);
+}
+footer p a {
+    color: #000;
+    font-weight: 500;
+}
+
+@media (max-width: 1239px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5.8rem;
+        z-index: 2;
+    }
+    header .logo img {
+        display: inline-block;
+        position: fixed;
+        top: 1rem;
+        left: 2rem;
+        width: 3rem;
+    }
+    section {
+        margin-left: 0;
+    }
+    header #menu .open {
+        display: block;
+    }
+    header .navbar {
+        position: fixed;
+        top: 0;
+        padding-top: 10rem;
+        height: 100%;
+        right: -100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: right 0.5s ease-in-out;  /* Плавное перемещение меню */
+    }
+    header .navbar.active {
+        right: 0;
+    }
+    header #menu .close.active {
+        display: block;
+        z-index: 1;
+        opacity: 1;  /* Полностью видимая */
+    }
+    header .navbar ul li {
+        margin: 1rem 5rem;
+    }
+    header .navbar ul li a {
+        color: var(--grey-clr);
+    }
+    header .navbar ul li a:hover {
+        color: #fff;
+    }
+}
+@media (max-width: 737px) {
+    .contact form .form-box {
+        flex-direction: column;
+    }
+}
+@media (max-width: 484px) {
+    .what .container .card {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
