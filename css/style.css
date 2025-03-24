@@ -124,7 +124,7 @@ header .navbar ul li a:hover {
 /* header section end */
 /* hello section start  */
 .hello {
-    background: url('../img/home_cakes_slider_bg.jpg') 0 0 / cover no-repeat;
+    background: url('../img/home_cakes_slider_bg.jpg') 0 0 / cover fixed;
     padding: 19rem 0rem;
     display: flex;
 }
@@ -458,10 +458,23 @@ footer p a {
     .contact form .form-box {
         flex-direction: column;
     }
+    .hello {
+        background: url('../img/home_cakes_slider_bg.jpg') center 0 / 210vw fixed;
+    }
+    .hello .content {
+        padding: 2.3rem;
+    }
 }
+
 @media (max-width: 484px) {
     .what .container .card {
         margin-left: 2rem;
         margin-right: 2rem;
+    }
+    .hello {
+        background: url('../img/home_cakes_slider_bg.jpg') center 0 / 225vw fixed;
+    }
+    .hello .content {
+        padding: 1.3rem;
     }
 }
