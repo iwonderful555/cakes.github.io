@@ -453,6 +453,13 @@ footer p a {
     header .navbar ul li a:hover {
         color: #fff;
     }
+    .hello {
+        background: url('../img/home_cakes_slider_bg.jpg') center 0 / 145vw fixed;
+        padding: 11rem 0 5rem;
+    }
+    .hello .content {
+        padding: 5rem;
+    }
 }
 @media (max-width: 737px) {
     .contact form .form-box {
